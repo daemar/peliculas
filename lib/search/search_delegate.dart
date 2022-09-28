@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:peliculas/models/models.dart';
 import 'package:peliculas/providers/movies_provider.dart';
@@ -58,7 +56,7 @@ Widget _emptyContainer() {
 
 class _MovieItem extends StatelessWidget {
   final Movie movie;
-  const _MovieItem({super.key, required this.movie});
+  const _MovieItem({required this.movie});
 
   @override
   Widget build(BuildContext context) {

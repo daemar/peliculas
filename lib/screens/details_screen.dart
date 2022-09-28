@@ -33,7 +33,7 @@ class DetailsScreen extends StatelessWidget {
 
 class _CustomAppBar extends StatelessWidget {
   final Movie movie;
-  const _CustomAppBar({super.key, required this.movie});
+  const _CustomAppBar({required this.movie});
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class _CustomAppBar extends StatelessWidget {
         centerTitle: true,
         titlePadding: const EdgeInsets.all(0),
         title: Container(
-            padding: EdgeInsets.only(bottom: 10, left: 10, right: 10),
+            padding: const EdgeInsets.only(bottom: 10, left: 10, right: 10),
             width: double.infinity,
             color: Colors.black12,
             alignment: Alignment.bottomCenter,
@@ -55,7 +55,7 @@ class _CustomAppBar extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: const TextStyle(fontSize: 16))),
         background: FadeInImage(
-          placeholder: AssetImage('assets/loading.gif'),
+          placeholder: const AssetImage('assets/loading.gif'),
           image: NetworkImage(movie.fullBackDropImg),
           fit: BoxFit.cover,
         ),
@@ -66,7 +66,7 @@ class _CustomAppBar extends StatelessWidget {
 
 class _PosterAndTitle extends StatelessWidget {
   final Movie movie;
-  const _PosterAndTitle({super.key, required this.movie});
+  const _PosterAndTitle({required this.movie});
 
   @override
   Widget build(BuildContext context) {
@@ -122,7 +122,7 @@ class _PosterAndTitle extends StatelessWidget {
 
 class _Overview extends StatelessWidget {
   final Movie movie;
-  const _Overview({super.key, required this.movie});
+  const _Overview({required this.movie});
 
   @override
   Widget build(BuildContext context) {

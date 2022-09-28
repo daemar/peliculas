@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:peliculas/models/models.dart';
 import 'package:peliculas/providers/movies_provider.dart';
 import 'package:provider/provider.dart';
@@ -15,9 +14,10 @@ class CastingCard extends StatelessWidget {
       future: moviesProvider.getMoviesCast(movieId),
       builder: (_, AsyncSnapshot<List<Cast>> snapshot) {
         if (!snapshot.hasData) {
+          // ignore: sized_box_for_whitespace
           return Container(
             height: 180,
-            child: CupertinoActivityIndicator(),
+            child: const CupertinoActivityIndicator(),
           );
         }
         final List<Cast> cast = snapshot.data!;
@@ -38,7 +38,7 @@ class CastingCard extends StatelessWidget {
 
 class _CastCard extends StatelessWidget {
   final Cast actor;
-  const _CastCard({super.key, required this.actor});
+  const _CastCard({required this.actor});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,7 @@ class _CastCard extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: FadeInImage(
-                placeholder: AssetImage('assets/no-image.jpg'),
+                placeholder: const AssetImage('assets/no-image.jpg'),
                 image: NetworkImage(actor.fullProfileImg),
                 height: 140,
                 width: 100,

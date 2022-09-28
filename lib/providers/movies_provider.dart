@@ -12,6 +12,7 @@ class MoviesProvider extends ChangeNotifier {
   final String _baseUrl = "api.themoviedb.org";
   final String _language = "es-ES";
 
+  // ignore: non_constant_identifier_names
   List<Movie> OnDisplayMovies = [];
   List<Movie> popularMovies = [];
   Map<int, List<Cast>> moviesCast = {};
@@ -20,9 +21,9 @@ class MoviesProvider extends ChangeNotifier {
 
   final debouncer = Debouncer(duration: const Duration(milliseconds: 500));
   final StreamController<List<Movie>> _suggestionStreamController =
-      new StreamController.broadcast();
+      StreamController.broadcast();
   Stream<List<Movie>> get suggestionStream =>
-      this._suggestionStreamController.stream;
+      _suggestionStreamController.stream;
   MoviesProvider() {
     print('MoviesProvider inicializado');
 
@@ -82,8 +83,8 @@ class MoviesProvider extends ChangeNotifier {
   void getSuggestionsByQuery(String searchTerm) {
     debouncer.value = '';
     debouncer.onValue = (value) async {
-      final results = await this.searchMovies(value);
-      this._suggestionStreamController.add(results);
+      final results = await searchMovies(value);
+      _suggestionStreamController.add(results);
     };
 
     final timer = Timer.periodic(const Duration(milliseconds: 300), (_) {

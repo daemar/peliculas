@@ -17,7 +17,6 @@ class _MovieSliderState extends State<MovieSlider> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     scrollController.addListener(() {
       if (scrollController.position.pixels >=
@@ -29,7 +28,6 @@ class _MovieSliderState extends State<MovieSlider> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
   }
 
@@ -66,7 +64,7 @@ class _MovieSliderState extends State<MovieSlider> {
 class _MoviePoster extends StatelessWidget {
   final Movie movie;
 
-  const _MoviePoster({super.key, required this.movie});
+  const _MoviePoster({required this.movie});
 
   @override
   Widget build(BuildContext context) {
