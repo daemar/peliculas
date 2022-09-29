@@ -78,9 +78,7 @@ class _MoviePoster extends StatelessWidget {
             onTap: () =>
                 Navigator.pushNamed(context, 'details', arguments: movie),
             child: Hero(
-              tag: {
-                '$movie.id - 1',
-              },
+              tag: movie.id,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: FadeInImage(

@@ -62,7 +62,7 @@ class _MovieItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Hero(
-        tag: movie.id + 2,
+        tag: movie.id.toString() + '6',
         child: FadeInImage(
           placeholder: const AssetImage('assets/no-image.jpg'),
           image: NetworkImage(movie.fullPosterImg),
