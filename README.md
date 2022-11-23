@@ -1,16 +1,23 @@
-# peliculas
+# Películas App - Flutter UI 
 
-A new Flutter project.
+Aplicación catálogo de películas puede ejecutar dispositivos Android e iOS porque se construye con flutter.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## ScreenShots 
+### Home Page
 
-A few resources to get you started if this is your first Flutter project:
+Muestra catálogo de peliculas, al hacer click muestra información detallada de pelicula
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="screenshot/1.png" height="500" width="250" />
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Busqueda
+
+Buscapeliculas por nombre
+
+<img src="screenshot/2.png" height="500" width="250" />
+
+### Detalle Película Page
+
+Muestra catálogo de peliculas
+
+<img src="screenshot/3.png" height="500" width="250" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="screenshot/4.png" height="500" width="250" />
