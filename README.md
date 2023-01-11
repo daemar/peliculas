@@ -1,6 +1,7 @@
 # Películas App - Flutter UI 
 
 Aplicación catálogo de películas puede ejecutar dispositivos Android e iOS porque se construye con flutter.
+Manejador de estados provider.
 
 
 ## ScreenShots 
